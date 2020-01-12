@@ -8,15 +8,15 @@ class CompleteListingBasicTest extends TestCase
 
    protected function setUp(): void
    {
-       $this->ListingBasic = new ListingBasic();
+       $this->ListingBasic = new ListingBasic(1, "A Basic Listing");
 
-       $this->ListingBasic->setId(1);
-       $this->ListingBasic->setTitle("A Basic Listing");
+       //$this->ListingBasic->setId(1);
+       //$this->ListingBasic->setTitle("A Basic Listing");
        $this->ListingBasic->setWebsite("www.basically.com");
        $this->ListingBasic->setEmail("basic_bob@basically.com");
        $this->ListingBasic->setTwitter("basic_php");
        $this->ListingBasic->setStatus("Basic");
-       
+
   /* start tests below */
    }
 
