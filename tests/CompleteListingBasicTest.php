@@ -4,18 +4,28 @@ use PHPUnit\Framework\TestCase;
 
 class CompleteListingBasicTest extends TestCase
 {
+   protected $testData;
    protected $ListingBasic;
 
    protected function setUp(): void
    {
-       $this->ListingBasic = new ListingBasic(1, "A Basic Listing");
+       $testData = [
+           'id' => 1,
+           'title' => "A Basic Listing",
+           'website' => "http://www.basically.com",
+           'email' => "basic_bob@basically.com",
+           'twitter' => "basic_php",
+           'status' => "Basic"
+       ];
 
-       //$this->ListingBasic->setId(1);
-       //$this->ListingBasic->setTitle("A Basic Listing");
+       /*$this->ListingBasic->setId(1);
+       $this->ListingBasic->setTitle("A Basic Listing");
        $this->ListingBasic->setWebsite("www.basically.com");
        $this->ListingBasic->setEmail("basic_bob@basically.com");
        $this->ListingBasic->setTwitter("basic_php");
-       $this->ListingBasic->setStatus("Basic");
+       $this->ListingBasic->setStatus("Basic");*/
+
+       $this->ListingBasic = new ListingBasic($testData);
 
   /* start tests below */
    }
@@ -48,7 +58,7 @@ class CompleteListingBasicTest extends TestCase
   public function hasWebsite()
   { //test for get method 'Website' ok
      $this->assertEquals(
-         "www.basically.com",
+         "http://www.basically.com",
          $this->ListingBasic->getWebsite()
      );
   }
@@ -83,7 +93,7 @@ class CompleteListingBasicTest extends TestCase
   /** @test */
   public function dataInArray()
   { //test for toArray method ensure all items has value
-    $this->assertEquals($this->BasicListing->toArray());
+    $this->assertEquals($this->testData,$this->ListingBasic->toArray());
   }
 
   /** @test */
@@ -91,7 +101,7 @@ class CompleteListingBasicTest extends TestCase
   {
     $this->assertInstanceOf(
         ListingBasic::class,
-        $this->BasicListing
+        $this->ListingBasic
     );
   }
 }
