@@ -9,7 +9,7 @@ class CompleteListingBasicTest extends TestCase
 
    protected function setUp(): void
    {
-       $testData = [
+       $this->testData = [
            'id' => 1,
            'title' => "A Basic Listing",
            'website' => "http://www.basically.com",
@@ -25,7 +25,7 @@ class CompleteListingBasicTest extends TestCase
        $this->ListingBasic->setTwitter("basic_php");
        $this->ListingBasic->setStatus("Basic");*/
 
-       $this->ListingBasic = new ListingBasic($testData);
+       $this->ListingBasic = new ListingBasic($this->testData);
 
   /* start tests below */
    }

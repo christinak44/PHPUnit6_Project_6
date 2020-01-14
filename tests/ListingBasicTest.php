@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-
+// review of questions posted on slack channel 5 led me to applying autoloader to pull classes versus creating a 'use' statement for each
 class ListingBasicTest extends TestCase
 {
    //exception testing breakout
