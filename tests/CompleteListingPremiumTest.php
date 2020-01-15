@@ -41,5 +41,9 @@ class CompleteListingPremiumTest extends TestCase
     $this->assertEquals($this->testData['description'],$this->ListingPremium->getDescription());
   }
 
-
+  /** @test */
+  public function AllowedTags()
+  {
+    $this->assertEquals(htmlspecialchars('<p><br><b><strong><em><u><ol><ul><li>'),$this->ListingPremium->displayAllowedTags());
+  }
 }

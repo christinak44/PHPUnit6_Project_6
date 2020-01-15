@@ -12,7 +12,7 @@ class CompleteListingBasicTest extends TestCase
        $this->testData = [
            'id' => 1,
            'title' => "A Basic Listing",
-           'website' => "http://www.basically.com",
+           'website' => "www.basically.com",
            'email' => "basic_bob@basically.com",
            'twitter' => "basic_php",
            'status' => "Basic"
@@ -36,6 +36,7 @@ class CompleteListingBasicTest extends TestCase
   { //check that object not empty
      $this->assertTrue(!empty($this->ListingBasic));
   }
+
   /** @test */
   public function hasId()
   { //test for get method 'ID' ok
@@ -58,15 +59,23 @@ class CompleteListingBasicTest extends TestCase
   public function hasWebsite()
   { //test for get method 'Website' ok
      $this->assertEquals(
-         "http://www.basically.com",
+         "www.basically.com",
          $this->ListingBasic->getWebsite()
      );
   }
   /** @test */
-  
+  public function createHttp()
+  { //test for get method 'Website' ok
+    //$this->ListingBasic->setWebsite('www.basically.com');
+     $this->assertStringContainsString('http://', $this->ListingBasic->getWebsite());
+     /*$this->assertEquals(
+         "http://www.basically.com",
+         $this->ListingBasic->getWebsite()
+     );*/
+  }
 
   /** @test */
-  function websiteNull()
+  public function websiteNull()
   {
     $this->ListingBasic->setWebsite(null);
     $this->assertNull($this->ListingBasic->getWebsite());
@@ -100,7 +109,7 @@ class CompleteListingBasicTest extends TestCase
   }
 
   /** @test */
-  function whenNoStatusBasic()
+ public function whenNoStatusBasic()
  {
    $this->ListingBasic->setStatus(null);
    $this->assertEquals('basic',$this->ListingBasic->getStatus());

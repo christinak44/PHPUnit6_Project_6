@@ -2,13 +2,14 @@ Complete Listing Basic
  [x] Empty
  [x] Has id
  [x] Has title
- [x] Has website
+ [ ] Has website
+ [x] Create http
  [x] Website null
  [x] Has email
  [x] Has twitter
  [x] Has status
  [x] When no status basic
- [x] Data in array
+ [ ] Data in array
  [x] Object created
 
 Complete Listing Featured
@@ -18,6 +19,7 @@ Complete Listing Featured
 Complete Listing Premium
  [x] Has status
  [x] Get description results
+ [x] Allowed tags
 
 Listing Basic
  [x] Construct must contain data
