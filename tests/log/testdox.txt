@@ -1,0 +1,31 @@
+Complete Listing Basic
+ [x] Empty
+ [x] Has id
+ [x] Has title
+ [x] Has website
+ [x] Website null
+ [x] Has email
+ [x] Has twitter
+ [x] Has status
+ [x] When no status basic
+ [x] Data in array
+ [x] Object created
+
+Complete Listing Featured
+ [x] Has status
+ [x] Get coc results
+
+Complete Listing Premium
+ [x] Has status
+ [x] Get description results
+
+Listing Basic
+ [x] Construct must contain data
+ [x] Id must be set
+ [x] Title must be set
+
+Listing Image
+ [x] No image
+ [x] Full path image
+ [x] Build path image
+

@@ -11,10 +11,10 @@ class ListingBasicTest extends TestCase
   public function constructMustContainData()
   { //test for missing data set exception
      $this->expectException(Exception::class);
-     $data[] = null;
+     //$data[] = '';
 
 
-        $listing = new ListingBasic($data);
+        $listing = new ListingBasic();
   }
   /** @test */
   public function idMustBeSet()
@@ -38,4 +38,6 @@ class ListingBasicTest extends TestCase
 
         $listing = new ListingBasic($data);
   }
+  
+
 }

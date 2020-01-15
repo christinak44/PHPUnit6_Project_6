@@ -62,6 +62,15 @@ class CompleteListingBasicTest extends TestCase
          $this->ListingBasic->getWebsite()
      );
   }
+  /** @test */
+  
+
+  /** @test */
+  function websiteNull()
+  {
+    $this->ListingBasic->setWebsite(null);
+    $this->assertNull($this->ListingBasic->getWebsite());
+  }
 
   /** @test */
   public function hasEmail()
@@ -91,6 +100,12 @@ class CompleteListingBasicTest extends TestCase
   }
 
   /** @test */
+  function whenNoStatusBasic()
+ {
+   $this->ListingBasic->setStatus(null);
+   $this->assertEquals('basic',$this->ListingBasic->getStatus());
+ }
+  /** @test */
   public function dataInArray()
   { //test for toArray method ensure all items has value
     $this->assertEquals($this->testData,$this->ListingBasic->toArray());
@@ -104,4 +119,5 @@ class CompleteListingBasicTest extends TestCase
         $this->ListingBasic
     );
   }
+
 }

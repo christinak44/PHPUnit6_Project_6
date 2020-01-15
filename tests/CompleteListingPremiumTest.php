@@ -16,7 +16,7 @@ class CompleteListingPremiumTest extends TestCase
            'email' => "premium_priti@premiumplus.com",
            'twitter' => "premiump_php",
            'status' => "Premium",
-           'description' => "Premium plus package conference includes everything from Premium, but wait there's more!"
+           'description' => "Premium plus package conference includes everything from Basic, but wait there's more!"
        ];
 
 

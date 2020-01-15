@@ -168,7 +168,7 @@ class ListingBasic
     }
     public function getImage()
     {
-      if (!empty($value)) {
+      if (!empty($this->image)) {
         return $this->image;
       } else {
           return $this->image = false;
